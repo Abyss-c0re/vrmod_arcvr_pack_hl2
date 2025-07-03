@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\weapons\w_annabelle/guns"
+
+	"$bumpmap" "models\weapons\w_annabelle/annabelle_normal_flat"
+
+	"$phong" "1"
+	"$phongexponent" "5"
+	"$phongboost"	"1"
+	"$phongfresnelranges"	"[ 0.2 0.5 0.5 ]"
+}
+}

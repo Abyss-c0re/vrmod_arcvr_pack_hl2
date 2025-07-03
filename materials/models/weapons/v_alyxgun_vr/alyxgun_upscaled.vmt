@@ -1,0 +1,11 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\weapons\v_alyxgun_vr/alyxgun_upscaled"
+
+
+	"$phong" "0"
+	"$phongexponent" "3"
+	"$phongboost"	"2.3"
+	"$phongfresnelranges"	"[ 0.2 0.5 1.5 ]"
+}
+}

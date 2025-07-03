@@ -1,0 +1,41 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models/Weapons/V_IRiflenew/V_IRiflenew"
+	"$bumpmap" "models/Weapons/V_IRiflenew/V_IRiflenew_normal"
+	"$phongexponenttexture" "models/Weapons/V_IRiflenew/V_IRiflenew_height"
+	
+	"$selfillum"			"0"
+        "$nocull"                   "1"
+	
+ 	"$phong" "1"
+	"$phongexponent" "15"
+	"$phongboost"	"15"
+	"$phongfresnelranges"	"[0.05 0.5 1]"
+	"$phongalbedotint" "1"
+//	"$PhongDisableHalflambert" "1"
+	"$surfaceprop" "metal"
+
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .06 .06 .06]"
+	"$normalmapalphaenvmapmask" "1"
+//	"$envmapfresnel" "0.05"
+	
+//	"$halflambert"			"1"
+	
+	"$rimlight" "1"
+	"$rimlightexponent" "4"
+	"$rimlightboost" "1"
+	"$rimmask" "1"
+	"$phongwarptexture"  "models/Weapons/V_IRiflenew/v_iriflenew_iridescence"
+	
+	"Proxies"
+	{
+		"Sine"
+		{
+			"resultVar" "$selfIllumTint"
+			"sinemin" 1
+			"sinemax" 1.00
+			"sineperiod" 3.00
+		}
+	}
+}

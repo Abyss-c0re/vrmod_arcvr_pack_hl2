@@ -1,0 +1,11 @@
+{
+	"title"		:	"HL2 VR Fixed Beta",
+	"type"		:	"weapon",
+	"tags"		:	[ "fun" ],
+	"ignore"	:
+	[
+		"*.psd",
+		"*.vcproj",
+		"*.svn*"
+	]
+}

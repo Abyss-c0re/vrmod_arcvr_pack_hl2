@@ -1,0 +1,30 @@
+"Unlittwotexture"
+{
+	// Original shader: VertexLitTexture
+	"$basetexture" "holosights/SMG1"
+	"$texture2"	"models/Weapons/V_smg1/noise"
+	"$additive" 1
+	"$model" 1
+        "$translucent" 1
+	//"$envmap" "env_cubemap"
+	//"$envmaptint" "[ 0.6 0.6 0.6 ]"	
+
+
+	"Proxies"
+	{
+
+		"TextureScroll"
+		{
+			"texturescrollvar" "$texture2transform"
+			"texturescrollrate" 4
+			"texturescrollangle" -50
+		}
+
+
+	}
+
+
+
+
+}
+

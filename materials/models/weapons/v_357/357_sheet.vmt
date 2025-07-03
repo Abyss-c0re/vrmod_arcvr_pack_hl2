@@ -1,0 +1,8 @@
+
+"vertexlitgeneric"
+{
+$baseTexture "models\Weapons\v_357/357_sheet"
+$nocull 0
+$selfillum 1
+	$selfillummask "models\weapons\v_357/357_mask"
+

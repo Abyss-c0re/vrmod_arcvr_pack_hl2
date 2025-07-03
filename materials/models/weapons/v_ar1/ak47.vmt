@@ -1,0 +1,10 @@
+"vertexlitgeneric"
+{
+	"$baseTexture" "models\Weapons\v_ar1\ak47"
+	"$bumpmap" "models\Weapons\v_ar1\flat_normal_bullet"
+
+	"$phong" "1"
+	"$phongexponent" "3"
+	"$phongboost"	"5"
+	"$phongfresnelranges"	"[ 0.2 0.5 1.5 ]"
+}

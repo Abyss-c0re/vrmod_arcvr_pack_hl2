@@ -1,0 +1,10 @@
+"vertexlitgeneric"
+{
+	"$baseTexture" "models\weapons\v_glock/v_glock"
+	"$bumpmap" "models\Weapons\v_glock\flat_normal_bullet_357"
+ $nocull "0"
+	"$phong" "1"
+	"$phongexponent" "3"
+	"$phongboost"	"7"
+	"$phongfresnelranges"	"[ 0.2 0.5 1.5 ]"
+}
