@@ -25,7 +25,7 @@ SWEP.NotAGun = true
 if CLIENT then
     g_VR.viewModelInfo = g_VR.viewModelInfo or {}
     g_VR.viewModelInfo.arcticvr_hl2_stunstick = {
-        offsetPos = Vector(0, 0, -3), -- forward, left, up
+        offsetPos = Vector(13, 2, -6), -- forward, left, up 13 2 -6
         offsetAng = Angle(90, 0, 0),
         noLaser = true -- you don't want a laser pointer 
     }
