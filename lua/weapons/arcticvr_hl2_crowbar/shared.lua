@@ -78,27 +78,37 @@ if CLIENT then
     SWEP.Firemode = 1
 end
 
--- Initialize the weapon and add the VRMod_MeleeHit hook
+-- Initialize the weapon and add VRMod hooks
 function SWEP:Initialize()
-    if self.BaseClass.Initialize then self.BaseClass.Initialize(self) end
-    -- Add hook to customize crowbar hits when equipped
-    hook.Add("VRMod_MeleeHit", "ArcticVR_Crowbar_Hit_" .. tostring(self:EntIndex()), function(hitData, callback)
-        local ply = hitData.Attacker
-        if IsValid(ply) and IsValid(ply:GetActiveWeapon()) and ply:GetActiveWeapon() == self then
-            callback("sound/weapons/crowbar/crowbar_impact1.wav", -- Use crowbar hit sound
-                "Impact.Metal", -- Custom decal for crowbar
-                nil, -- Keep default damage
-                nil, -- Keep default multiplier (1.25 for blunt)
-                nil, -- Keep default damage type
-                hitData.Reach * 1.2, -- Slightly increase reach for crowbar
-                hitData.Radius, -- Keep default radius
-                "blunt")
-            -- Set impact type to blunt
-        end
-    end)
+    if SERVER then
+        hook.Add("VRMod_MeleeHit", "ArcticVR_Crowbar_Hit_" .. tostring(self:EntIndex()), function(hitData, callback)
+            local ply = hitData.Attacker
+            if IsValid(ply) and IsValid(ply:GetActiveWeapon()) and ply:GetActiveWeapon() == self then
+                callback(nil,
+                    "Impact.Metal", -- Custom decal for crowbar
+                    nil, -- Keep default damage
+                    nil, -- Keep default multiplier (1.25 for blunt)
+                    nil, -- Keep default damage type
+                    hitData.Reach * 1.2, -- Slightly increase reach for crowbar
+                    hitData.Radius, -- Keep default radius
+                    "blunt")
+            end
+        end)
+    end
+
+
 end
 
--- Clean up the hook when the weapon is removed or dropped
 function SWEP:OnRemove()
     hook.Remove("VRMod_MeleeHit", "ArcticVR_Crowbar_Hit_" .. tostring(self:EntIndex()))
+end
+
+-- Prevent default gun click sound
+function SWEP:PrimaryAttack()
+    -- Do nothing to suppress default firing behavior and click sound
+end
+
+-- Prevent default gun click sound
+function SWEP:SecondaryAttack()
+    -- Do nothing to suppress default firing behavior and click sound
 end

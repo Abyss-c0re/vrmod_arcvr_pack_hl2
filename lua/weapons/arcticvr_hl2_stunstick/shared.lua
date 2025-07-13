@@ -78,7 +78,6 @@ end
 
 -- Initialize the weapon and add the VRMod_MeleeHit hook with electric effect
 function SWEP:Initialize()
-    if self.BaseClass.Initialize then self.BaseClass.Initialize(self) end
     -- Add hook to customize stunstick hits when equipped
     hook.Add("VRMod_MeleeHit", "ArcticVR_Stunstick_Hit_" .. tostring(self:EntIndex()), function(hitData, callback)
         local ply = hitData.Attacker
@@ -106,4 +105,14 @@ end
 -- Clean up the hook when the weapon is removed or dropped
 function SWEP:OnRemove()
     hook.Remove("VRMod_MeleeHit", "ArcticVR_Stunstick_Hit_" .. tostring(self:EntIndex()))
+end
+
+-- Prevent default gun click sound
+function SWEP:PrimaryAttack()
+    -- Do nothing to suppress default firing behavior and click sound
+end
+
+-- Prevent default gun click sound
+function SWEP:SecondaryAttack()
+    -- Do nothing to suppress default firing behavior and click sound
 end
