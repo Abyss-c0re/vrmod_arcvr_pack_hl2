@@ -81,7 +81,7 @@ end
 -- Initialize the weapon and add VRMod hooks
 function SWEP:Initialize()
     if SERVER then
-        hook.Add("VRMod_MeleeHit", "ArcticVR_Crowbar_Hit_" .. tostring(self:EntIndex()), function(hitData, callback)
+        hook.Add("VRMod_MeleeHit", "ArcticVR_CursedCrowbar_Hit_" .. tostring(self:EntIndex()), function(hitData, callback)
             local ply = hitData.Attacker
             if IsValid(ply) and IsValid(ply:GetActiveWeapon()) and ply:GetActiveWeapon() == self then
                 callback(nil, "Impact.Metal", -- Custom decal for crowbar
@@ -97,7 +97,7 @@ function SWEP:Initialize()
 end
 
 function SWEP:OnRemove()
-    hook.Remove("VRMod_MeleeHit", "ArcticVR_Crowbar_Hit_" .. tostring(self:EntIndex()))
+    hook.Remove("VRMod_MeleeHit", "ArcticVR_CursedCrowbar_Hit_" .. tostring(self:EntIndex()))
 end
 
 -- Prevent default gun click sound
